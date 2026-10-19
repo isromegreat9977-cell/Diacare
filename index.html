@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DiaCare | Diabetes Awareness</title>
+
+  <meta
+    name="description"
+    content="DiaCare is an interactive diabetes awareness website with educational information, testing methods and a personalized awareness quiz."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="site-header">
+
+    <a href="#home" class="logo">
+      <span class="logo-icon">🩺</span>
+      <span>DiaCare</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#learn" data-i18n="navLearn">Learn</a>
+      <a href="#testing" data-i18n="navTesting">Testing</a>
+      <a href="#quiz" data-i18n="navQuiz">Quiz</a>
+      <a href="#find-care" data-i18n="navCare">Find Care</a>
+      <a href="#recommendations" data-i18n="navPlan">My Plan</a>
+    </nav>
+
+    <div class="header-tools">
+
+      <label for="languageSelect" class="sr-only">
+        Language
+      </label>
+
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+
+      <button
+        id="themeToggle"
+        class="icon-button"
+        type="button"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
+
+      <button
+        id="menuToggle"
+        class="menu-button"
+        type="button"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="home" class="hero">
+
+      <div class="hero-content">
+
+        <span class="eyebrow" data-i18n="heroEyebrow">
+          Diabetes Awareness
+        </span>
+
+        <h1 data-i18n="heroTitle">
+          Understand diabetes.
+          Make informed choices.
+        </h1>
+
+        <p data-i18n="heroText">
+          DiaCare helps you learn about diabetes, understand common
+          symptoms and explore different ways glucose can be checked.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#quiz"
+            class="btn btn-primary"
+            data-i18n="startQuiz"
+          >
+            Start Awareness Quiz
+          </a>
+
+          <a
+            href="#learn"
+            class="btn btn-secondary"
+            data-i18n="exploreLearn"
+          >
+            Explore Information
+          </a>
+
+        </div>
+
+        <div class="hero-note">
+          <span>ℹ️</span>
+          <span data-i18n="heroNote">
+            This website is for education and awareness. The quiz cannot
+            diagnose diabetes.
+          </span>
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="health-orbit orbit-one"></div>
+        <div class="health-orbit orbit-two"></div>
+
+        <div class="hero-card">
+
+          <div class="hero-card-icon">
+            🩸
+          </div>
+
+          <h3 data-i18n="heroCardTitle">
+            Learn • Check • Understand
+          </h3>
+
+          <p data-i18n="heroCardText">
+            Explore diabetes information and create your own
+            personalized awareness plan.
+          </p>
+
+          <div class="mini-stat">
+            <strong id="questionCount">19</strong>
+            <span data-i18n="questions">
+              Questions
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK NAVIGATION
+    ========================== -->
+
+    <section class="quick-actions">
+
+      <a href="#learn" class="quick-card">
+        <span>📚</span>
+        <strong data-i18n="quickLearnTitle">
+          Learn
+        </strong>
+        <small data-i18n="quickLearnText">
+          Understand the basics
+        </small>
+      </a>
+
+      <a href="#testing" class="quick-card">
+        <span>🔬</span>
+        <strong data-i18n="quickTestingTitle">
+          Explore Testing
+        </strong>
+        <small data-i18n="quickTestingText">
+          Compare testing approaches
+        </small>
+      </a>
+
+      <a href="#quiz" class="quick-card">
+        <span>🧠</span>
+        <strong data-i18n="quickQuizTitle">
+          Take Quiz
+        </strong>
+        <small data-i18n="quickQuizText">
+          Get personalized guidance
+        </small>
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         LEARN SECTION
+    ========================== -->
+
+    <section id="learn" class="section">
+
+      <div class="section-heading">
+
+        <span class="eyebrow" data-i18n="learnEyebrow">
+          Learn
+        </span>
+
+        <h2 data-i18n="learnTitle">
+          Diabetes, explained simply
+        </h2>
+
+        <p data-i18n="learnText">
+          Understanding diabetes starts with knowing what glucose,
+          insulin and common symptoms mean.
+        </p>
+
+      </div>
+
+
+      <div class="learn-grid">
+
+        <article class="learn-card">
+
+          <div class="card-icon">🩸</div>
+
+          <h3 data-i18n="whatDiabetesTitle">
+            What is diabetes?
+          </h3>
+
+          <p data-i18n="whatDiabetesText">
+            Diabetes is a group of conditions that affect how the body
+            manages blood glucose. Glucose is an important source of
+            energy for the body.
+          </p>
+
+        </article>
+
+
+        <article class="learn-card">
+
+          <div class="card-icon">🧬</div>
+
+          <h3 data-i18n="typesTitle">
+            Main types
+          </h3>
+
+          <p data-i18n="typesText">
+            The main types include type 1 diabetes, type 2 diabetes
+            and gestational diabetes. They have different causes and
+            management approaches.
+          </p>
+
+        </article>
+
+
+        <article class="learn-card">
+
+          <div class="card-icon">🔎</div>
+
+          <h3 data-i18n="symptomsTitle">
+            Common signs
+          </h3>
+
+          <p data-i18n="symptomsText">
+            Increased thirst, frequent urination, tiredness and
+            changes in vision can occur with diabetes, although these
+            symptoms can also have other causes.
+          </p>
+
+        </article>
+
+
+        <article class="learn-card">
+
+          <div class="card-icon">💚</div>
+
+          <h3 data-i18n="supportTitle">
+            Healthy habits
+          </h3>
+
+          <p data-i18n="supportText">
+            Regular movement, balanced meals, adequate sleep and
+            appropriate healthcare can support overall health.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TESTING SECTION
+    ========================== -->
+
+    <section id="testing" class="section testing-section">
+
+      <div class="section-heading">
+
+        <span class="eyebrow" data-i18n="testingEyebrow">
+          Explore
+        </span>
+
+        <h2 data-i18n="testingTitle">
+          How can diabetes be checked?
+        </h2>
+
+        <p data-i18n="testingText">
+          Explore the difference between non-invasive approaches and
+          minimally invasive methods.
+        </p>
+
+      </div>
+
+
+      <!-- TESTING TABS -->
+
+      <div
+        class="testing-tabs"
+        role="tablist"
+        aria-label="Testing methods"
+      >
+
+        <button
+          class="testing-tab active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-test="noninvasive"
+          data-i18n="nonInvasiveTab"
+        >
+          🌿 Non-invasive
+        </button>
+
+        <button
+          class="testing-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-test="minimally-invasive"
+          data-i18n="minimallyInvasiveTab"
+        >
+          🩸 Minimally invasive
+        </button>
+
+      </div>
+
+
+      <div class="testing-content">
+
+        <!-- NON INVASIVE -->
+
+        <article
+          class="testing-panel active"
+          id="noninvasive"
+        >
+
+          <div class="testing-icon">
+            🌿
+          </div>
+
+          <div>
+
+            <h3 data-i18n="nonInvasiveTitle">
+              Non-invasive approaches
+            </h3>
+
+            <p data-i18n="nonInvasiveText">
+              Non-invasive approaches do not require taking blood from
+              the body. Some technologies are being researched to
+              estimate glucose using signals such as light or other
+              measurements.
+            </p>
+
+
+            <div class="info-grid">
+
+              <div class="info-card">
+
+                <span>01</span>
+
+                <h4 data-i18n="noBloodTitle">
+                  No blood sample
+                </h4>
+
+                <p data-i18n="noBloodText">
+                  The method does not require a blood draw or
+                  finger-prick.
+                </p>
+
+              </div>
+
+
+              <div class="info-card">
+
+                <span>02</span>
+
+                <h4 data-i18n="comfortTitle">
+                  Comfort-focused
+                </h4>
+
+                <p data-i18n="comfortText">
+                  These approaches aim to make glucose monitoring
+                  easier and more comfortable.
+                </p>
+
+              </div>
+
+
+              <div class="info-card">
+
+                <span>03</span>
+
+                <h4 data-i18n="evolvingTitle">
+                  Technology is evolving
+                </h4>
+
+                <p data-i18n="evolvingText">
+                  Many non-invasive glucose technologies are still
+                  being researched or have limitations.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="testing-note">
+
+              💡
+
+              <strong data-i18n="rememberTitle">
+                Remember:
+              </strong>
+
+              <span data-i18n="nonInvasiveNote">
+                A non-invasive device should not automatically be
+                assumed to diagnose diabetes. Medical diagnosis
+                requires appropriate clinical assessment and
+                validated testing.
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- MINIMALLY INVASIVE -->
+
+        <article
+          class="testing-panel"
+          id="minimally-invasive"
+        >
+
+          <div class="testing-icon">
+            🩸
+          </div>
+
+          <div>
+
+            <h3 data-i18n="minimallyTitle">
+              Minimally invasive methods
+            </h3>
+
+            <p data-i18n="minimallyText">
+              These methods use a small blood sample or another
+              measurement that involves a minor procedure. They are
+              commonly used to measure glucose more directly.
+            </p>
+
+
+            <div class="info-grid">
+
+              <div class="info-card">
+
+                <span>01</span>
+
+                <h4 data-i18n="fingerTitle">
+                  Finger-prick testing
+                </h4>
+
+                <p data-i18n="fingerText">
+                  A small blood sample can be used with a glucose
+                  meter to measure blood glucose.
+                </p>
+
+              </div>
+
+
+              <div class="info-card">
+
+                <span>02</span>
+
+                <h4 data-i18n="bloodTestTitle">
+                  Blood tests
+                </h4>
+
+                <p data-i18n="bloodTestText">
+                  Healthcare professionals can use laboratory tests
+                  to assess blood glucose and other markers.
+                </p>
+
+              </div>
+
+
+              <div class="info-card">
+
+                <span>03</span>
+
+                <h4 data-i18n="monitoringTitle">
+                  Continuous monitoring
+                </h4>
+
+                <p data-i18n="monitoringText">
+                  Some glucose-monitoring systems use a small sensor
+                  placed under the skin to continuously estimate
+                  glucose levels.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="testing-note">
+
+              🩺
+
+              <strong data-i18n="importantTitle">
+                Important:
+              </strong>
+
+              <span data-i18n="minimallyNote">
+                The right test depends on the person's situation.
+                A healthcare professional can explain which test
+                is appropriate.
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- TESTING KNOWLEDGE CHECK -->
+
+      <div class="testing-quiz">
+
+        <span class="quiz-badge">
+          🧠
+        </span>
+
+        <h3 data-i18n="knowledgeTitle">
+          Quick knowledge check
+        </h3>
+
+        <p
+          id="testingQuestion"
+          data-i18n="knowledgeQuestion"
+        >
+          Which approach requires a blood sample?
+        </p>
+
+        <div class="testing-options">
+
+          <button
+            class="test-answer"
+            type="button"
+            data-answer="non"
+            data-i18n="knowledgeOption1"
+          >
+            🌿 Non-invasive
+          </button>
+
+          <button
+            class="test-answer"
+            type="button"
+            data-answer="blood"
+            data-i18n="knowledgeOption2"
+          >
+            🩸 Blood-based testing
+          </button>
+
+        </div>
+
+        <p
+          id="testingFeedback"
+          class="testing-feedback"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUIZ
+    ========================== -->
+
+    <section id="quiz" class="section quiz-section">
+
+      <div class="section-heading">
+
+        <span class="eyebrow" data-i18n="quizEyebrow">
+          Interactive Quiz
+        </span>
+
+        <h2 data-i18n="quizTitle">
+          Check your awareness
+        </h2>
+
+        <p data-i18n="quizText">
+          Answer a few questions about measurable risk factors, then
+          add symptoms if you like. You will get an educational risk
+          estimate, not a diagnosis.
+        </p>
+
+      </div>
+
+
+      <div class="quiz-layout">
+
+        <!-- QUIZ CARD -->
+
+        <div class="quiz-card">
+
+          <div class="quiz-header">
+
+            <div>
+
+              <span
+                id="questionNumber"
+                class="question-number"
+              >
+                Question 1 of 19
+              </span>
+
+              <div class="progress-container">
+
+                <div
+                  id="progressBar"
+                  class="progress-bar"
+                ></div>
+
+              </div>
+
+            </div>
+
+            <span
+              id="progressPercent"
+              class="progress-percent"
+            >
+              0%
+            </span>
+
+          </div>
+
+
+          <div
+            id="questionArea"
+            class="question-area"
+          >
+          </div>
+
+
+          <div class="quiz-controls">
+
+            <button
+              id="backButton"
+              class="btn btn-secondary"
+              type="button"
+              data-i18n="back"
+            >
+              ← Back
+            </button>
+
+            <button
+              id="nextButton"
+              class="btn btn-primary"
+              type="button"
+              data-i18n="next"
+            >
+              Next →
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- LIVE PERSONALIZATION -->
+
+        <aside
+          id="recommendations"
+          class="recommendation-card"
+        >
+
+          <div class="recommendation-heading">
+
+            <span class="recommendation-icon">
+              ✨
+            </span>
+
+            <div>
+
+              <h3 data-i18n="livePlanTitle">
+                Your live plan
+              </h3>
+
+              <p data-i18n="livePlanText">
+                Your recommendations will update as you answer.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <ul
+            id="liveRecommendations"
+            class="recommendation-list"
+          >
+
+            <li class="empty-recommendation">
+              <span>💡</span>
+
+              <span data-i18n="liveEmpty">
+                Answer a question to begin creating your plan.
+              </span>
+            </li>
+
+          </ul>
+
+
+          <div class="decision-trail">
+
+            <h4 data-i18n="decisionTitle">
+              Your decisions
+            </h4>
+
+            <div id="decisionTrail">
+
+              <p
+                class="empty-decision"
+                data-i18n="decisionEmpty"
+              >
+                Your answers will appear here.
+              </p>
+
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+
+      <!-- QUIZ RESULT -->
+
+      <div
+        id="quizResult"
+        class="quiz-result hidden"
+        aria-live="polite"
+      >
+
+        <div class="result-icon">
+          💚
+        </div>
+
+        <span class="eyebrow" data-i18n="resultEyebrow">
+          Your DiaCare Summary
+        </span>
+
+        <h2 id="resultTitle">
+          Your estimated prediabetes risk is:
+        </h2>
+
+        <div
+          id="riskLevel"
+          class="risk-level is-hidden"
+          role="status"
+        ></div>
+
+        <p id="resultText">
+        </p>
+
+        <p
+          id="riskScoreNote"
+          class="risk-score-note is-hidden"
+        ></p>
+
+        <p
+          id="riskSourceNote"
+          class="risk-source-note is-hidden"
+        ></p>
+
+
+        <!-- CHARTS (summary of the person's own answers) -->
+
+        <div
+          id="chartsBlock"
+          class="result-block is-hidden"
+        >
+
+          <h3 data-i18n="chartsTitle">
+            Your results at a glance
+          </h3>
+
+          <p
+            class="result-block-intro"
+            data-i18n="chartsIntro"
+          >
+            These charts only summarise your own answers.
+          </p>
+
+          <div class="chart-grid">
+
+            <figure class="chart-card">
+              <figcaption data-i18n="chartFactorsTitle">
+                Your risk-factor profile
+              </figcaption>
+              <div id="chartFactors"></div>
+            </figure>
+
+            <figure class="chart-card">
+              <figcaption data-i18n="chartSymptomsTitle">
+                Symptom awareness answers
+              </figcaption>
+              <div id="chartSymptoms"></div>
+            </figure>
+
+          </div>
+
+        </div>
+
+
+        <!-- WHICH FACTORS CONTRIBUTED -->
+
+        <div
+          id="factorsBlock"
+          class="result-block is-hidden"
+        >
+
+          <h3 data-i18n="factorsTitle">
+            What contributed to this estimate?
+          </h3>
+
+          <p
+            class="result-block-intro"
+            data-i18n="factorsIntro"
+          >
+            These are the general risk factors this tool looks at.
+          </p>
+
+          <div
+            id="riskFactors"
+            class="risk-factors"
+          ></div>
+
+        </div>
+
+
+        <!-- TIPS (risk factors) -->
+
+        <div
+          id="tipsBlock"
+          class="result-block is-hidden"
+        >
+
+          <h3 data-i18n="tipsTitle">
+            Tips based on your answers
+          </h3>
+
+          <div
+            id="finalRecommendations"
+            class="final-recommendations"
+          >
+          </div>
+
+        </div>
+
+
+        <!-- SYMPTOMS & AWARENESS (separate from the estimate) -->
+
+        <div
+          id="symptomBlock"
+          class="result-block is-hidden"
+        >
+
+          <h3 data-i18n="symptomTitle">
+            Symptoms &amp; awareness
+          </h3>
+
+          <p
+            class="result-block-intro"
+            data-i18n="symptomIntro"
+          >
+            Symptoms are for awareness only.
+          </p>
+
+          <div
+            id="symptomRecommendations"
+            class="final-recommendations"
+          >
+          </div>
+
+        </div>
+
+
+        <!-- LINK TO NEARBY CENTRES -->
+
+        <div
+          id="careCta"
+          class="care-cta is-hidden"
+        >
+
+          <p data-i18n="careCtaText">
+            Thinking about getting checked? Find hospitals, clinics
+            and labs near you.
+          </p>
+
+          <a
+            href="#find-care"
+            class="btn btn-secondary"
+            data-i18n="careCtaButton"
+          >
+            Find nearby centres
+          </a>
+
+        </div>
+
+
+        <!-- DISCLAIMER -->
+
+        <div
+          class="result-disclaimer"
+          role="note"
+        >
+
+          <span class="result-disclaimer-icon">⚠️</span>
+
+          <p data-i18n="resultDisclaimer">
+            This assessment is for educational and risk-awareness
+            purposes only. It does not diagnose diabetes or
+            prediabetes. A blood test and consultation with a
+            healthcare professional are required for diagnosis.
+          </p>
+
+        </div>
+
+
+        <div class="result-actions">
+
+          <button
+            id="retryResults"
+            class="btn btn-secondary is-hidden"
+            type="button"
+            data-i18n="retry"
+          >
+            Try again
+          </button>
+
+          <button
+            id="restartQuiz"
+            class="btn btn-primary"
+            type="button"
+            data-i18n="restart"
+          >
+            Take Quiz Again
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FIND CARE (nearby centres)
+    ========================== -->
+
+    <section id="find-care" class="section care-section">
+
+      <div class="section-heading">
+
+        <span class="eyebrow" data-i18n="careEyebrow">
+          Find Care
+        </span>
+
+        <h2 data-i18n="careTitle">
+          Find diabetes testing near you
+        </h2>
+
+        <p data-i18n="careText">
+          Search for nearby hospitals, clinics and diagnostic labs
+          where a blood test such as HbA1c or fasting glucose may
+          be available.
+        </p>
+
+      </div>
+
+
+      <div class="care-card">
+
+        <div class="care-controls">
+
+          <button
+            id="locateButton"
+            class="btn btn-primary"
+            type="button"
+            data-i18n="careLocate"
+          >
+            📍 Use my location
+          </button>
+
+          <span class="care-or" data-i18n="careOr">or</span>
+
+          <form id="careSearchForm" class="care-search">
+
+            <label
+              class="sr-only"
+              for="careQuery"
+              id="careQueryLabel"
+            >
+              Search by city or area
+            </label>
+
+            <input
+              id="careQuery"
+              class="care-input"
+              type="text"
+              maxlength="100"
+              autocomplete="off"
+              placeholder="City or area, e.g. Pimpri, Pune"
+            >
+
+            <button
+              class="btn btn-secondary"
+              type="submit"
+              id="careSearchButton"
+            >
+              Search
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <div class="care-options">
+
+          <label for="careRadius" data-i18n="careRadiusLabel">
+            Search distance
+          </label>
+
+          <select id="careRadius" aria-label="Search distance">
+            <option value="5">5 km</option>
+            <option value="10">10 km</option>
+            <option value="25">25 km</option>
+          </select>
+
+        </div>
+
+
+        <p
+          id="careStatus"
+          class="care-status"
+          aria-live="polite"
+        ></p>
+
+        <div
+          id="careFilters"
+          class="care-filters is-hidden"
+          role="group"
+        ></div>
+
+        <ul
+          id="careResults"
+          class="care-results"
+        ></ul>
+
+        <button
+          id="careMore"
+          class="btn btn-secondary is-hidden"
+          type="button"
+          data-i18n="careShowMore"
+        >
+          Show more
+        </button>
+
+        <p class="care-google">
+          <a
+            id="careGoogle"
+            href="https://www.google.com/maps/search/?api=1&query=diabetes+diagnostic+centre+near+me"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="careGoogle"
+          >
+            Search on Google Maps instead
+          </a>
+        </p>
+
+        <p class="care-note" data-i18n="careNote">
+          Listings come from OpenStreetMap. Please call ahead to
+          confirm a place offers diabetes tests.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPORTANT NOTE
+    ========================== -->
+
+    <section class="disclaimer-section">
+
+      <div class="disclaimer-box">
+
+        <span class="disclaimer-icon">
+          ⚠️
+        </span>
+
+        <div>
+
+          <h3 data-i18n="disclaimerTitle">
+            Important
+          </h3>
+
+          <p data-i18n="disclaimerText">
+            DiaCare is an educational awareness website. This quiz
+            does not diagnose diabetes and should not replace advice,
+            testing or assessment from a qualified healthcare
+            professional. If you are concerned about symptoms,
+            talk to a parent, guardian, trusted adult or healthcare
+            professional.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-content">
+
+      <div>
+
+        <div class="logo footer-logo">
+          <span class="logo-icon">🩺</span>
+          <span>DiaCare</span>
+        </div>
+
+        <p data-i18n="footerText">
+          Learn. Understand. Take informed steps.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#home" data-i18n="navHome">
+          Home
+        </a>
+
+        <a href="#learn" data-i18n="navLearn">
+          Learn
+        </a>
+
+        <a href="#testing" data-i18n="navTesting">
+          Testing
+        </a>
+
+        <a href="#quiz" data-i18n="navQuiz">
+          Quiz
+        </a>
+
+        <a href="#find-care" data-i18n="navCare">
+          Find Care
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 DiaCare
+      </span>
+
+      <span data-i18n="footerDisclaimer">
+        Created for diabetes awareness and education.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="risk-api.js"></script>
+  <script src="script.js"></script>
+  <script src="find-care.js"></script>
+
+</body>
+</html>
