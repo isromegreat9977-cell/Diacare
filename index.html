@@ -12,6 +12,22 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    /* Picks the page from the address BEFORE first paint.
+       site.js does the full job later; this only avoids a flash. */
+    (function () {
+      var ids = {
+        home: "home", learn: "learn", testing: "learn",
+        quiz: "check", recommendations: "check", "find-care": "care",
+        "body-explorer": "body", "diet-guide": "diet"
+      };
+      var hash = location.hash.replace("#", "");
+      var named = hash.match(/^\/(\w+)/);
+      var page = named ? named[1] : (ids[hash] || "home");
+      document.documentElement.setAttribute("data-page", page);
+    })();
+  </script>
 </head>
 
 <body>
@@ -22,18 +38,18 @@
 
   <header class="site-header">
 
-    <a href="#home" class="logo">
+    <a href="#/home" class="logo">
       <span class="logo-icon">🩺</span>
       <span>DiaCare</span>
     </a>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#home" data-i18n="navHome">Home</a>
-      <a href="#learn" data-i18n="navLearn">Learn</a>
-      <a href="#testing" data-i18n="navTesting">Testing</a>
-      <a href="#quiz" data-i18n="navQuiz">Quiz</a>
-      <a href="#find-care" data-i18n="navCare">Find Care</a>
-      <a href="#recommendations" data-i18n="navPlan">My Plan</a>
+      <a href="#/home" data-i18n="navHome">Home</a>
+      <a href="#/learn" data-i18n="navLearn">Learn</a>
+      <a href="#/body" data-i18n="navBody">Body Explorer</a>
+      <a href="#/diet" data-i18n="navDiet">Diet Guide</a>
+      <a href="#/check" data-i18n="navCheck">Risk Check</a>
+      <a href="#/care" data-i18n="navCare">Find Care</a>
     </nav>
 
     <div class="header-tools">
@@ -76,7 +92,7 @@
          HERO
     ========================== -->
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-page="home">
 
       <div class="hero-content">
 
@@ -163,37 +179,90 @@
          QUICK NAVIGATION
     ========================== -->
 
-    <section class="quick-actions">
+    <section class="quick-actions" data-page="home">
 
-      <a href="#learn" class="quick-card">
+      <a href="#/learn" class="quick-card">
         <span>📚</span>
-        <strong data-i18n="quickLearnTitle">
-          Learn
-        </strong>
-        <small data-i18n="quickLearnText">
-          Understand the basics
-        </small>
+        <strong data-i18n="quickLearnTitle">Learn</strong>
+        <small data-i18n="quickLearnText">Understand the basics</small>
+      </a>
+
+      <a href="#/body" class="quick-card">
+        <span>🫀</span>
+        <strong data-i18n="quickBodyTitle">Body Explorer</strong>
+        <small data-i18n="quickBodyText">See what diabetes does inside</small>
+      </a>
+
+      <a href="#/diet" class="quick-card">
+        <span>🥗</span>
+        <strong data-i18n="quickDietTitle">Diet Guide</strong>
+        <small data-i18n="quickDietText">Country-wise eating ideas</small>
       </a>
 
       <a href="#testing" class="quick-card">
         <span>🔬</span>
-        <strong data-i18n="quickTestingTitle">
-          Explore Testing
-        </strong>
-        <small data-i18n="quickTestingText">
-          Compare testing approaches
-        </small>
+        <strong data-i18n="quickTestingTitle">Explore Testing</strong>
+        <small data-i18n="quickTestingText">Compare testing approaches</small>
       </a>
 
-      <a href="#quiz" class="quick-card">
+      <a href="#/check" class="quick-card">
         <span>🧠</span>
-        <strong data-i18n="quickQuizTitle">
-          Take Quiz
-        </strong>
-        <small data-i18n="quickQuizText">
-          Get personalized guidance
-        </small>
+        <strong data-i18n="quickQuizTitle">Take Quiz</strong>
+        <small data-i18n="quickQuizText">Get personalized guidance</small>
       </a>
+
+      <a href="#/care" class="quick-card">
+        <span>📍</span>
+        <strong data-i18n="quickCareTitle">Find Care</strong>
+        <small data-i18n="quickCareText">Nearby testing centres</small>
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         HOME: HOW IT HELPS + FACTS
+    ========================== -->
+
+    <section class="home-extra" data-page="home">
+
+      <h2 class="home-extra-title" data-i18n="stepsTitle">How DiaCare helps</h2>
+
+      <div class="home-steps">
+
+        <div class="home-step reveal">
+          <span class="step-number">1</span>
+          <h3 data-i18n="step1Title">Learn</h3>
+          <p data-i18n="step1Text">Understand what diabetes is.</p>
+        </div>
+
+        <div class="home-step reveal">
+          <span class="step-number">2</span>
+          <h3 data-i18n="step2Title">Explore</h3>
+          <p data-i18n="step2Text">Look inside the body.</p>
+        </div>
+
+        <div class="home-step reveal">
+          <span class="step-number">3</span>
+          <h3 data-i18n="step3Title">Check</h3>
+          <p data-i18n="step3Text">Get an educational risk estimate.</p>
+        </div>
+
+      </div>
+
+      <div class="facts-card reveal" id="facts">
+
+        <span class="facts-label" data-i18n="factsTitle">Did you know?</span>
+
+        <p class="facts-text" id="factText" aria-live="polite"></p>
+
+        <div class="facts-controls">
+          <button type="button" id="factPrev" class="facts-arrow">‹</button>
+          <div class="facts-dots" id="factDots"></div>
+          <button type="button" id="factNext" class="facts-arrow">›</button>
+        </div>
+
+      </div>
 
     </section>
 
@@ -202,7 +271,7 @@
          LEARN SECTION
     ========================== -->
 
-    <section id="learn" class="section">
+    <section id="learn" class="section" data-page="learn">
 
       <div class="section-heading">
 
@@ -299,7 +368,7 @@
          TESTING SECTION
     ========================== -->
 
-    <section id="testing" class="section testing-section">
+    <section id="testing" class="section testing-section" data-page="learn">
 
       <div class="section-heading">
 
@@ -609,7 +678,7 @@
          QUIZ
     ========================== -->
 
-    <section id="quiz" class="section quiz-section">
+    <section id="quiz" class="section quiz-section" data-page="check">
 
       <div class="section-heading">
 
@@ -993,7 +1062,7 @@
          FIND CARE (nearby centres)
     ========================== -->
 
-    <section id="find-care" class="section care-section">
+    <section id="find-care" class="section care-section" data-page="care">
 
       <div class="section-heading">
 
@@ -1125,6 +1194,138 @@
 
 
     <!-- =========================
+         BODY EXPLORER
+    ========================== -->
+
+    <section id="body-explorer" class="section body-section" data-page="body">
+
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="bodyEyebrow">Body Explorer</span>
+        <h2 data-i18n="bodyTitle">What diabetes does inside your body</h2>
+        <p data-i18n="bodyText">Tap a glowing dot to explore.</p>
+      </div>
+
+      <div class="mode-switch" id="modeSwitch" role="group">
+        <button type="button" class="mode-button" data-mode="normal" data-i18n="modeNormal">Healthy</button>
+        <button type="button" class="mode-button" data-mode="diabetes" data-i18n="modeDiabetes">High sugar over years</button>
+        <button type="button" class="mode-button" data-mode="protect" data-i18n="modeProtect">Protect it</button>
+      </div>
+
+      <div class="body-layout">
+
+        <div class="body-figure">
+          <div id="bodyStage"></div>
+          <p class="body-legend">
+            <span class="legend-dot"></span>
+            <span data-i18n="bodyLegend">Blood sugar travelling in the blood</span>
+          </p>
+        </div>
+
+        <div class="body-info">
+
+          <article id="organPanel" class="organ-panel" aria-live="polite"></article>
+
+          <div class="organ-nav">
+            <button type="button" id="organPrev" class="btn btn-secondary" data-i18n="bodyPrev">← Previous</button>
+            <span id="organStep" class="organ-step"></span>
+            <button type="button" id="organNext" class="btn btn-primary" data-i18n="bodyNext">Next →</button>
+          </div>
+
+          <div id="organChips" class="organ-chips" role="group"></div>
+
+        </div>
+
+      </div>
+
+      <p class="body-note" data-i18n="bodyNote">General education only.</p>
+
+
+      <div class="cell-block">
+
+        <h3 data-i18n="cellTitle">Insulin and the cell: a closer look</h3>
+        <p class="cell-text" data-i18n="cellText">After a meal, sugar enters the blood.</p>
+
+        <div class="cell-tabs" id="cellTabs" role="group">
+          <button type="button" class="mode-button" data-cell="healthy" data-i18n="cellHealthy">Healthy</button>
+          <button type="button" class="mode-button" data-cell="t2" data-i18n="cellT2">Type 2 (insulin resistance)</button>
+          <button type="button" class="mode-button" data-cell="t1" data-i18n="cellT1">Type 1 (very little insulin)</button>
+        </div>
+
+        <div class="cell-grid">
+
+          <div id="cellStage" class="cell-stage"></div>
+
+          <div class="cell-side">
+
+            <div class="meter-box">
+              <span class="meter-label" data-i18n="cellMeter">Blood sugar level</span>
+              <div class="meter"><span id="meterFill"></span></div>
+              <strong id="meterText"></strong>
+            </div>
+
+            <ul class="cell-legend">
+              <li><span class="swatch glucose"></span><span data-i18n="cellGlucose">Sugar (glucose)</span></li>
+              <li><span class="swatch insulin"></span><span data-i18n="cellInsulin">Insulin</span></li>
+            </ul>
+
+            <p id="cellCaption" class="cell-caption" aria-live="polite"></p>
+
+            <button type="button" id="cellReplay" class="btn btn-secondary" data-i18n="cellReplay">▶ Replay after-meal animation</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DIET GUIDE
+    ========================== -->
+
+    <section id="diet-guide" class="section diet-section" data-page="diet">
+
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="dietEyebrow">Diet Guide</span>
+        <h2 data-i18n="dietTitle">Eat well, your country's way</h2>
+        <p data-i18n="dietText">Pick your country.</p>
+      </div>
+
+      <div class="diet-controls">
+
+        <div class="control-group">
+          <h3 data-i18n="dietCountry">Choose your country</h3>
+          <div id="countryGrid" class="country-grid" role="group"></div>
+        </div>
+
+        <div class="control-group">
+          <h3 data-i18n="dietPref">Eating preference</h3>
+          <div class="mode-switch compact" id="prefToggle" role="group">
+            <button type="button" class="mode-button" data-pref="veg" data-i18n="prefVeg">Vegetarian</button>
+            <button type="button" class="mode-button" data-pref="non" data-i18n="prefNon">Includes meat &amp; fish</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="dietContent" class="diet-content"></div>
+
+      <div id="dietPersonal" class="diet-personal"></div>
+
+      <p class="diet-disclaimer" data-i18n="dietDisclaimer">
+        General healthy-eating ideas, not a personal meal plan.
+      </p>
+
+      <div class="diet-actions">
+        <button type="button" id="dietPrint" class="btn btn-secondary" data-i18n="dietPrint">🖨️ Print this guide</button>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
          IMPORTANT NOTE
     ========================== -->
 
@@ -1183,27 +1384,12 @@
 
 
       <div class="footer-links">
-
-        <a href="#home" data-i18n="navHome">
-          Home
-        </a>
-
-        <a href="#learn" data-i18n="navLearn">
-          Learn
-        </a>
-
-        <a href="#testing" data-i18n="navTesting">
-          Testing
-        </a>
-
-        <a href="#quiz" data-i18n="navQuiz">
-          Quiz
-        </a>
-
-        <a href="#find-care" data-i18n="navCare">
-          Find Care
-        </a>
-
+        <a href="#/home" data-i18n="navHome">Home</a>
+        <a href="#/learn" data-i18n="navLearn">Learn</a>
+        <a href="#/body" data-i18n="navBody">Body Explorer</a>
+        <a href="#/diet" data-i18n="navDiet">Diet Guide</a>
+        <a href="#/check" data-i18n="navCheck">Risk Check</a>
+        <a href="#/care" data-i18n="navCare">Find Care</a>
       </div>
 
     </div>
@@ -1226,7 +1412,12 @@
 
   <script src="risk-api.js"></script>
   <script src="script.js"></script>
+  <button id="toTop" class="to-top" type="button" aria-label="Back to top">↑</button>
+
   <script src="find-care.js"></script>
+  <script src="site.js"></script>
+  <script src="body-explorer.js"></script>
+  <script src="diet-guide.js"></script>
 
 </body>
 </html>

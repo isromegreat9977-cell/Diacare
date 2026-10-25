@@ -653,7 +653,131 @@ const translations = {
       "Listings come from OpenStreetMap, which volunteers keep up to date, so some places may be missing or out of date. A place being listed does not mean it offers diabetes tests: please call ahead and ask. Your location is used only to run this search and is not stored by DiaCare; the coordinates are sent to OpenStreetMap services to find places. If you feel very unwell, seek urgent medical care or call your local emergency number (112 in India).",
 
     kmUnit:
-      "km"
+      "km",
+
+
+    /* ---------- NAVIGATION + HOME TILES ---------- */
+
+    navBody: "Body Explorer",
+    navDiet: "Diet Guide",
+    navCheck: "Risk Check",
+
+    quickBodyTitle: "Body Explorer",
+    quickBodyText: "See what diabetes does inside",
+    quickDietTitle: "Diet Guide",
+    quickDietText: "Country-wise eating ideas",
+    quickCareTitle: "Find Care",
+    quickCareText: "Nearby testing centres",
+
+    stepsTitle: "How DiaCare helps",
+    step1Title: "Learn",
+    step1Text: "Understand what diabetes is, how it develops and how it is tested.",
+    step2Title: "Explore",
+    step2Text: "Look inside the body and see healthy eating built from your country's foods.",
+    step3Title: "Check",
+    step3Text: "Get an educational risk estimate and find a testing centre near you.",
+
+    factsTitle: "Did you know?",
+    factPrev: "Previous fact",
+    factNext: "Next fact",
+    fact1: "Prediabetes often has no symptoms, so many people do not know they have it. Only a blood test can tell.",
+    fact2: "In a large US study, lifestyle changes cut the chance of developing type 2 diabetes by more than half in people with prediabetes.",
+    fact3: "A short walk after a meal can help lower the blood sugar rise that follows eating.",
+    fact4: "Your muscles are the biggest user of sugar in your body. Moving them helps your body handle sugar better.",
+    fact5: "Diabetes cannot be diagnosed from symptoms alone. A blood test and a healthcare professional are needed.",
+
+
+    /* ---------- BODY EXPLORER ---------- */
+
+    bodyEyebrow: "Body Explorer",
+    bodyTitle: "What diabetes does inside your body",
+    bodyText: "Tap a glowing dot (or pick an organ below) to see how it works, what long-term high blood sugar can do to it, and how to protect it. These are general educational explanations.",
+
+    modeLabel: "View",
+    modeNormal: "Healthy",
+    modeDiabetes: "High sugar over years",
+    modeProtect: "Protect it",
+
+    modeNormalHead: "How it works",
+    modeDiabetesHead: "What high blood sugar can do",
+    modeProtectHead: "How to protect it",
+
+    bodySigns: "Signs to watch for",
+    bodyPrev: "← Previous",
+    bodyNext: "Next →",
+    bodyStep: "Organ {n} of {total}",
+    bodyOrgans: "Organs",
+    bodyLegend: "Blood sugar (glucose) travelling in the blood",
+    bodyNote: "General education only. Diabetes affects people differently, and good care greatly lowers the risk of complications.",
+    bodySvgLabel: "Front view of a human body with tappable organs",
+
+    cellTitle: "Insulin and the cell: a closer look",
+    cellText: "After a meal, sugar enters the blood. Insulin works like a key that opens doors on cells so sugar can get in and be used for energy. Pick a situation and replay what happens.",
+    cellHealthy: "Healthy",
+    cellT2: "Type 2 (insulin resistance)",
+    cellT1: "Type 1 (very little insulin)",
+    cellReplay: "▶ Replay after-meal animation",
+    cellBlood: "Blood",
+    cellInside: "Inside the cell",
+    cellGlucose: "Sugar (glucose)",
+    cellInsulin: "Insulin",
+    cellMeter: "Blood sugar level",
+    meterNormal: "Normal",
+    meterHigh: "High",
+    cellCapHealthy: "Insulin opens the doors, sugar moves into the cells for energy, and blood sugar stays in a healthy range.",
+    cellCapT2: "There is plenty of insulin, but the doors respond poorly (insulin resistance). Sugar piles up in the blood. Prediabetes is an early stage of this.",
+    cellCapT1: "The body makes very little insulin, so the doors stay shut and sugar cannot get in. People with type 1 diabetes need insulin treatment.",
+    cellSvgLabel: "Diagram of sugar and insulin at the surface of a cell",
+
+
+    /* ---------- DIET GUIDE ---------- */
+
+    dietEyebrow: "Diet Guide",
+    dietTitle: "Eat well, your country's way",
+    dietText: "Pick your country to see a healthy plate built from familiar local foods, with a sample day and easy swaps.",
+
+    dietCountry: "Choose your country",
+    dietPref: "Eating preference",
+    prefVeg: "Vegetarian",
+    prefNon: "Includes meat & fish",
+
+    plateTitle: "Your healthy plate",
+    plateHint: "Tap a part of the plate to see examples.",
+    plateVeg: "Non-starchy vegetables",
+    plateProtein: "Protein",
+    plateCarb: "Whole grains & starches",
+    plateHalf: "½ of the plate",
+    plateQuarter: "¼ of the plate",
+    plateSvgLabel: "Plate divided into half vegetables, a quarter protein and a quarter whole grains",
+
+    limitTitle: "Go easy on",
+    swapsTitle: "Easy swaps",
+    dayTitle: "A sample day",
+    mealBreakfast: "Breakfast",
+    mealLunch: "Lunch",
+    mealSnack: "Snack",
+    mealDinner: "Dinner",
+    tipTitle: "Local tip",
+
+    regionTitle: "Regional notes",
+    regionNorth: "North",
+    regionSouth: "South",
+    regionWest: "West",
+    regionEast: "East",
+
+    personalTitle: "Tips based on your Risk Check",
+    personalEmpty: "Complete the Risk Check to see tips matched to your answers.",
+    personalLink: "Take the Risk Check",
+    personalBmi: "Your BMI is {bmi}. Portion size matters most: use the plate method and ask a professional about a safe, gradual goal.",
+    personalBp: "You reported high blood pressure. Go easy on salt, pickles, salty snacks and processed foods.",
+    personalActivity: "You reported little weekly activity. A 10 to 15 minute walk after meals, if you are able, helps your body handle sugar.",
+    personalFamily: "Diabetes runs in your family, so building these eating habits early is one of the best things you can do.",
+    personalGood: "Your answers show some protective habits. Keep them up and keep the plate balanced.",
+
+    dietPrint: "🖨️ Print this guide",
+    dietDisclaimer: "General healthy-eating ideas, not a personal meal plan. Needs vary with age, health conditions and medicines. If you take insulin or other glucose-lowering medicines, do not change your eating drastically without advice. Please ask a doctor or registered dietitian for a plan made for you.",
+
+    backToTop: "Back to top"
   },
 
 
@@ -1300,7 +1424,131 @@ const translations = {
       "सूची OpenStreetMap से आती है, जिसे स्वयंसेवक अपडेट रखते हैं, इसलिए कुछ स्थान छूट सकते हैं या पुराने हो सकते हैं। किसी स्थान का सूची में होना यह नहीं दर्शाता कि वहां डायबिटीज़ जांच होती है: कृपया पहले फोन करके पूछ लें। आपकी लोकेशन केवल इस खोज के लिए उपयोग होती है और DiaCare इसे सेव नहीं करता; स्थान खोजने के लिए निर्देशांक OpenStreetMap सेवाओं को भेजे जाते हैं। यदि आप बहुत अस्वस्थ महसूस करें, तो तुरंत चिकित्सा सहायता लें या अपने स्थानीय आपातकालीन नंबर पर कॉल करें (भारत में 112)।",
 
     kmUnit:
-      "किमी"
+      "किमी",
+
+
+    /* ---------- नेविगेशन + होम कार्ड ---------- */
+
+    navBody: "शरीर एक्सप्लोरर",
+    navDiet: "आहार गाइड",
+    navCheck: "जोखिम जांच",
+
+    quickBodyTitle: "शरीर एक्सप्लोरर",
+    quickBodyText: "देखें डायबिटीज़ अंदर क्या करती है",
+    quickDietTitle: "आहार गाइड",
+    quickDietText: "देश के अनुसार खान-पान के सुझाव",
+    quickCareTitle: "जांच केंद्र",
+    quickCareText: "पास के जांच केंद्र",
+
+    stepsTitle: "DiaCare कैसे मदद करता है",
+    step1Title: "सीखें",
+    step1Text: "समझें कि डायबिटीज़ क्या है, कैसे विकसित होती है और इसकी जांच कैसे होती है।",
+    step2Title: "जानें",
+    step2Text: "शरीर के अंदर झांकें और अपने देश के खाद्य पदार्थों से बना स्वस्थ आहार देखें।",
+    step3Title: "जांचें",
+    step3Text: "शैक्षणिक जोखिम अनुमान पाएं और अपने पास जांच केंद्र ढूंढें।",
+
+    factsTitle: "क्या आप जानते हैं?",
+    factPrev: "पिछला तथ्य",
+    factNext: "अगला तथ्य",
+    fact1: "प्रीडायबिटीज़ में अक्सर कोई लक्षण नहीं होते, इसलिए कई लोगों को पता ही नहीं चलता। केवल रक्त जांच से पता चलता है।",
+    fact2: "अमेरिका के एक बड़े अध्ययन में, प्रीडायबिटीज़ वाले लोगों में जीवनशैली में बदलाव से टाइप 2 डायबिटीज़ होने की संभावना आधे से ज़्यादा घट गई।",
+    fact3: "खाने के बाद थोड़ी देर टहलने से भोजन के बाद बढ़ने वाली ब्लड शुगर को कम करने में मदद मिल सकती है।",
+    fact4: "आपके शरीर में शुगर का सबसे बड़ा उपयोग मांसपेशियां करती हैं। उन्हें चलाने से शरीर शुगर को बेहतर संभालता है।",
+    fact5: "केवल लक्षणों से डायबिटीज़ का निदान नहीं हो सकता। इसके लिए रक्त जांच और स्वास्थ्य विशेषज्ञ ज़रूरी हैं।",
+
+
+    /* ---------- शरीर एक्सप्लोरर ---------- */
+
+    bodyEyebrow: "शरीर एक्सप्लोरर",
+    bodyTitle: "डायबिटीज़ आपके शरीर के अंदर क्या करती है",
+    bodyText: "किसी चमकते बिंदु पर टैप करें (या नीचे से अंग चुनें) और देखें कि वह कैसे काम करता है, लंबे समय तक अधिक ब्लड शुगर उस पर क्या असर डाल सकती है, और उसे कैसे सुरक्षित रखें। ये सामान्य शैक्षणिक व्याख्याएं हैं।",
+
+    modeLabel: "दृश्य",
+    modeNormal: "स्वस्थ",
+    modeDiabetes: "वर्षों तक अधिक शुगर",
+    modeProtect: "सुरक्षा करें",
+
+    modeNormalHead: "यह कैसे काम करता है",
+    modeDiabetesHead: "अधिक ब्लड शुगर क्या कर सकती है",
+    modeProtectHead: "इसे कैसे सुरक्षित रखें",
+
+    bodySigns: "इन संकेतों पर ध्यान दें",
+    bodyPrev: "← पिछला",
+    bodyNext: "अगला →",
+    bodyStep: "अंग {n} / {total}",
+    bodyOrgans: "अंग",
+    bodyLegend: "रक्त में बहती ब्लड शुगर (ग्लूकोज़)",
+    bodyNote: "केवल सामान्य शिक्षा के लिए। डायबिटीज़ हर व्यक्ति पर अलग असर डालती है, और अच्छी देखभाल से जटिलताओं का जोखिम काफ़ी घट जाता है।",
+    bodySvgLabel: "मानव शरीर का सामने का दृश्य, जिसमें टैप करने योग्य अंग हैं",
+
+    cellTitle: "इंसुलिन और कोशिका: करीब से देखें",
+    cellText: "भोजन के बाद शुगर रक्त में आती है। इंसुलिन एक चाबी की तरह कोशिकाओं के दरवाज़े खोलता है ताकि शुगर अंदर जाकर ऊर्जा के लिए उपयोग हो सके। कोई स्थिति चुनें और देखें क्या होता है।",
+    cellHealthy: "स्वस्थ",
+    cellT2: "टाइप 2 (इंसुलिन प्रतिरोध)",
+    cellT1: "टाइप 1 (बहुत कम इंसुलिन)",
+    cellReplay: "▶ भोजन के बाद का एनिमेशन फिर चलाएं",
+    cellBlood: "रक्त",
+    cellInside: "कोशिका के अंदर",
+    cellGlucose: "शुगर (ग्लूकोज़)",
+    cellInsulin: "इंसुलिन",
+    cellMeter: "ब्लड शुगर स्तर",
+    meterNormal: "सामान्य",
+    meterHigh: "अधिक",
+    cellCapHealthy: "इंसुलिन दरवाज़े खोलता है, शुगर ऊर्जा के लिए कोशिकाओं में जाती है, और ब्लड शुगर स्वस्थ सीमा में रहती है।",
+    cellCapT2: "इंसुलिन भरपूर है, लेकिन दरवाज़े ठीक से प्रतिक्रिया नहीं देते (इंसुलिन प्रतिरोध)। शुगर रक्त में जमा होती है। प्रीडायबिटीज़ इसी की शुरुआती अवस्था है।",
+    cellCapT1: "शरीर बहुत कम इंसुलिन बनाता है, इसलिए दरवाज़े बंद रहते हैं और शुगर अंदर नहीं जा पाती। टाइप 1 डायबिटीज़ वालों को इंसुलिन उपचार चाहिए।",
+    cellSvgLabel: "कोशिका की सतह पर शुगर और इंसुलिन का चित्र",
+
+
+    /* ---------- आहार गाइड ---------- */
+
+    dietEyebrow: "आहार गाइड",
+    dietTitle: "अपने देश के अंदाज़ में अच्छा खाएं",
+    dietText: "अपना देश चुनें और जानी-पहचानी स्थानीय चीज़ों से बनी स्वस्थ थाली, एक नमूना दिन और आसान बदलाव देखें।",
+
+    dietCountry: "अपना देश चुनें",
+    dietPref: "खान-पान की पसंद",
+    prefVeg: "शाकाहारी",
+    prefNon: "मांस और मछली शामिल",
+
+    plateTitle: "आपकी स्वस्थ थाली",
+    plateHint: "उदाहरण देखने के लिए थाली के किसी हिस्से पर टैप करें।",
+    plateVeg: "बिना स्टार्च वाली सब्ज़ियां",
+    plateProtein: "प्रोटीन",
+    plateCarb: "साबुत अनाज और स्टार्च",
+    plateHalf: "थाली का ½ हिस्सा",
+    plateQuarter: "थाली का ¼ हिस्सा",
+    plateSvgLabel: "थाली जिसमें आधा हिस्सा सब्ज़ियां, चौथाई प्रोटीन और चौथाई साबुत अनाज है",
+
+    limitTitle: "कम मात्रा में लें",
+    swapsTitle: "आसान बदलाव",
+    dayTitle: "एक नमूना दिन",
+    mealBreakfast: "नाश्ता",
+    mealLunch: "दोपहर का भोजन",
+    mealSnack: "हल्का नाश्ता",
+    mealDinner: "रात का भोजन",
+    tipTitle: "स्थानीय सुझाव",
+
+    regionTitle: "क्षेत्रीय सुझाव",
+    regionNorth: "उत्तर",
+    regionSouth: "दक्षिण",
+    regionWest: "पश्चिम",
+    regionEast: "पूर्व",
+
+    personalTitle: "आपकी जोखिम जांच पर आधारित सुझाव",
+    personalEmpty: "अपने उत्तरों के अनुसार सुझाव देखने के लिए जोखिम जांच पूरी करें।",
+    personalLink: "जोखिम जांच करें",
+    personalBmi: "आपका BMI {bmi} है। मात्रा सबसे अहम है: थाली विधि अपनाएं और सुरक्षित, धीमे लक्ष्य के बारे में विशेषज्ञ से पूछें।",
+    personalBp: "आपने उच्च रक्तचाप बताया। नमक, अचार, नमकीन स्नैक्स और प्रोसेस्ड खाद्य पदार्थ कम लें।",
+    personalActivity: "आपने सप्ताह में कम गतिविधि बताई। यदि संभव हो, तो भोजन के बाद 10 से 15 मिनट टहलना शरीर को शुगर संभालने में मदद करता है।",
+    personalFamily: "आपके परिवार में डायबिटीज़ है, इसलिए ये खान-पान की आदतें जल्दी अपनाना सबसे अच्छे कदमों में से एक है।",
+    personalGood: "आपके उत्तर कुछ सुरक्षात्मक आदतें दिखाते हैं। इन्हें जारी रखें और थाली संतुलित रखें।",
+
+    dietPrint: "🖨️ यह गाइड प्रिंट करें",
+    dietDisclaimer: "ये सामान्य स्वस्थ खान-पान के सुझाव हैं, व्यक्तिगत आहार योजना नहीं। ज़रूरतें उम्र, स्वास्थ्य स्थितियों और दवाओं के अनुसार बदलती हैं। यदि आप इंसुलिन या शुगर घटाने वाली अन्य दवाएं लेते हैं, तो सलाह के बिना खान-पान में भारी बदलाव न करें। कृपया अपने लिए योजना बनवाने हेतु डॉक्टर या पंजीकृत आहार विशेषज्ञ से पूछें।",
+
+    backToTop: "ऊपर जाएं"
   }
 
 };
@@ -1832,6 +2080,9 @@ function applyTranslations() {
   if (typeof renderCare === "function") {
     renderCare();
   }
+
+  /* lets the newer pages (Body Explorer, Diet Guide, site.js) re-draw */
+  document.dispatchEvent(new CustomEvent("diacare:language"));
 
 }
 
